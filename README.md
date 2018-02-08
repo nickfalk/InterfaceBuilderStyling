@@ -27,3 +27,5 @@ The available styles are "action", "basic", and "simple". As with the textTypeId
 
 
 *not creating a gigantic monolith storyboard 
+
+<img alt="Example gif" src="https://github.com/nickfalk/InterfaceBuilderStyling/blob/master/example.gif" />
