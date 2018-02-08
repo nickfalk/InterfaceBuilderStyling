@@ -14,7 +14,7 @@
 		621553EB2029797C00DAC20D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 621553E92029797C00DAC20D /* LaunchScreen.storyboard */; };
 		62155401202979A600DAC20D /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62155400202979A600DAC20D /* Styles.swift */; };
 		62155403202AD4A200DAC20D /* TextControllerClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62155402202AD4A200DAC20D /* TextControllerClasses.swift */; };
-		62155405202C1AED00DAC20D /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62155404202C1AED00DAC20D /* Button.swift */; };
+		62155405202C1AED00DAC20D /* StylableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62155404202C1AED00DAC20D /* StylableButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		621553EC2029797D00DAC20D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62155400202979A600DAC20D /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		62155402202AD4A200DAC20D /* TextControllerClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextControllerClasses.swift; sourceTree = "<group>"; };
-		62155404202C1AED00DAC20D /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		62155404202C1AED00DAC20D /* StylableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylableButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				621553E42029797C00DAC20D /* Main.storyboard */,
 				62155400202979A600DAC20D /* Styles.swift */,
 				62155402202AD4A200DAC20D /* TextControllerClasses.swift */,
-				62155404202C1AED00DAC20D /* Button.swift */,
+				62155404202C1AED00DAC20D /* StylableButton.swift */,
 				621553E72029797C00DAC20D /* Assets.xcassets */,
 				621553E92029797C00DAC20D /* LaunchScreen.storyboard */,
 				621553EC2029797D00DAC20D /* Info.plist */,
@@ -145,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62155405202C1AED00DAC20D /* Button.swift in Sources */,
+				62155405202C1AED00DAC20D /* StylableButton.swift in Sources */,
 				62155401202979A600DAC20D /* Styles.swift in Sources */,
 				62155403202AD4A200DAC20D /* TextControllerClasses.swift in Sources */,
 				621553E32029797C00DAC20D /* ViewController.swift in Sources */,

@@ -1,6 +1,6 @@
 import UIKit
 
-@IBDesignable class Button: UIButton {
+@IBDesignable class StylableButton: UIButton {
     private var buttonStyleType: ButtonStyleType?
 
     @IBInspectable var buttonTypeIdentifier: String? {
