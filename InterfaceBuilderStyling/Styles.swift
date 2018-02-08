@@ -5,7 +5,7 @@ struct TextRenderingSpecifications {
     var color: UIColor
 }
 
-enum TextType: String {
+enum TextStyleType: String {
     case heading = "heading"
     case subHeading = "subheading"
     case body = "body"
@@ -13,7 +13,7 @@ enum TextType: String {
 }
 
 struct FontStyle {
-    var textType = TextType.body
+    var textStyleType = TextStyleType.body
 
     private let headingFont = UIFont(name: "HelveticaNeue-Bold", size: 32)!
     private let subHeadingFont = UIFont(name: "HelveticaNeue-Medium", size: 24)!
@@ -26,7 +26,7 @@ struct FontStyle {
     private let detailColor = UIColor.gray
 
     var fontAndColor: TextRenderingSpecifications {
-        switch self.textType {
+        switch self.textStyleType {
         case .heading:
             return TextRenderingSpecifications(font: headingFont, color: headingColor)
         case .subHeading:
@@ -38,8 +38,8 @@ struct FontStyle {
         }
     }
 
-    init(textType: TextType) {
-        self.textType = textType
+    init(textStyleType: TextStyleType) {
+        self.textStyleType = textStyleType
     }
 }
 
@@ -52,20 +52,20 @@ struct ButtonSpecifications {
 }
 
 
-enum ButtonType: String {
+enum ButtonStyleType: String {
     case action = "action"
     case basic = "basic"
     case simple = "simple"
 }
 
 struct ButtonStyle {
-    var buttonType = ButtonType.basic
+    var buttonType = ButtonStyleType.basic
 
     private let actionSpecifications = ButtonSpecifications(fontColor: .white, backgroundColor: .blue, borderColor: UIColor.blue.cgColor, borderWidth: 2, cornerRadius: 5)
     private let basicSpecifications = ButtonSpecifications(fontColor: .blue, backgroundColor: .white, borderColor: UIColor.blue.cgColor, borderWidth: 2, cornerRadius: 5)
     private let simpleSpecifications = ButtonSpecifications(fontColor: .blue, backgroundColor: .clear, borderColor: nil, borderWidth: 0,    cornerRadius: 0)
 
-    init(buttonType: ButtonType) {
+    init(buttonType: ButtonStyleType) {
         self.buttonType = buttonType
     }
 

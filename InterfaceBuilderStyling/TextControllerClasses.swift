@@ -3,20 +3,20 @@ import UIKit
 // neither a protocol or a common parent. Each of the classes will therefore need to implement the same snippet.
 
 @IBDesignable class Label: UILabel {
-    private(set) var textType: TextType?
+    private(set) var textStyleType: TextStyleType?
 
     @IBInspectable var textTypeIdentifier: String? {
         set {
             guard let textTypeIdentifier = newValue else { return }
-            if let textType = TextType(rawValue: textTypeIdentifier.lowercased()) {
-                self.textType = textType
-                let style = FontStyle(textType: textType)
+            if let textStyleType = TextStyleType(rawValue: textTypeIdentifier.lowercased()) {
+                self.textStyleType = textStyleType
+                let style = FontStyle(textStyleType: textStyleType)
                 self.font = style.fontAndColor.font
                 self.textColor = style.fontAndColor.color
             }
         }
         get {
-            return textType?.rawValue
+            return textStyleType?.rawValue
         }
     }
 }
@@ -24,20 +24,20 @@ import UIKit
 
 
 @IBDesignable class TextView: UITextView {
-    private(set) var textType: TextType?
+    private(set) var textStyleType: TextStyleType?
 
     @IBInspectable var textTypeIdentifier: String? {
         set {
             guard let textTypeIdentifier = newValue else { return }
-            if let textType = TextType(rawValue: textTypeIdentifier.lowercased()) {
-                self.textType = textType
-                let style = FontStyle(textType: textType)
+            if let textStyleType = TextStyleType(rawValue: textTypeIdentifier.lowercased()) {
+                self.textStyleType = textStyleType
+                let style = FontStyle(textStyleType: textStyleType)
                 self.font = style.fontAndColor.font
                 self.textColor = style.fontAndColor.color
             }
         }
         get {
-            return textType?.rawValue
+            return textStyleType?.rawValue
         }
     }
 }
@@ -45,20 +45,20 @@ import UIKit
 
 
 @IBDesignable class TextField: UITextField {
-    private(set) var textType: TextType?
+    private(set) var textStyleType: TextStyleType?
 
     @IBInspectable var textTypeIdentifier: String? {
         set {
             guard let textTypeIdentifier = newValue else { return }
-            if let textType = TextType(rawValue: textTypeIdentifier.lowercased()) {
-                self.textType = textType
-                let style = FontStyle(textType: textType)
+            if let textStyleType = TextStyleType(rawValue: textTypeIdentifier.lowercased()) {
+                self.textStyleType = textStyleType
+                let style = FontStyle(textStyleType: textStyleType)
                 self.font = style.fontAndColor.font
                 self.textColor = style.fontAndColor.color
             }
         }
         get {
-            return textType?.rawValue
+            return textStyleType?.rawValue
         }
     }
 }

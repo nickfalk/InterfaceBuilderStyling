@@ -1,13 +1,13 @@
 import UIKit
 
 @IBDesignable class Button: UIButton {
-    private var _buttonTypeIdentifier: String?
+    private var buttonStyleType: ButtonStyleType?
 
     @IBInspectable var buttonTypeIdentifier: String? {
         set {
             guard let buttonTypeIdentifier = newValue else { return }
-            if let buttonType = ButtonType(rawValue: buttonTypeIdentifier.lowercased()) {
-                _buttonTypeIdentifier = buttonTypeIdentifier
+            if let buttonType = ButtonStyleType(rawValue: buttonTypeIdentifier.lowercased()) {
+                self.buttonStyleType = buttonType
                 let style = ButtonStyle(buttonType: buttonType)
                 self.setTitleColor(style.specifications.fontColor, for: .normal)
                 self.backgroundColor = style.specifications.backgroundColor
@@ -17,7 +17,7 @@ import UIKit
             }
         }
         get {
-            return _buttonTypeIdentifier
+            return buttonStyleType?.rawValue
         }
     }
 }
